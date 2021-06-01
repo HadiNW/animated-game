@@ -101,9 +101,108 @@ li {
 		transform: translateX(-50%);
 
 		.primary-button {
-			padding: 8px 32px;
-			background-color: greenyellow;
+			// padding: .8rem 6.4rem;
+			background-color: #08B879;
 			display: block;
+			color: #fff;
+			border: 4px solid #fff;
+			border-radius: 8px;
+			font-size: 2rem;
+			width: 15rem;
+			height: 4.5rem;
 		}
 	}
+}
+
+.idle-button-anim {
+	animation-name: idle-button-anim;
+	animation-duration: 1.2s;
+	animation-iteration-count: infinite;
+}
+
+.clicked-button-anim {
+	animation-name: clicked-button-anim;
+	animation-duration: .44s;
+}
+
+@keyframes idle-button-anim {
+	25%  {
+		transform: scale(1.2);
+		animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+	}
+	50%  {
+		transform: scale(1.2);
+		animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+		background-color: #1CE39C;
+	}
+	100% {
+		transform: scale(1);
+		animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+	}
+}
+
+@keyframes clicked-button-anim  {
+	27%  {
+		transform: scale(.95);
+		animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+	}
+	54% {
+		transform: scale(1);
+		animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+	}
+	100% {
+		transform: scale(1);
+		animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+	}
+}
+
+.bg-grayss {
+	background-color: #B5BBC5 !important;
+}
+
+.header {
+	display: flex;
+	background-color: #82E1FF;
+	justify-content: space-between;
+	align-items: center;
+	position: absolute;
+	top: 1%;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 85%;
+	padding: .5rem 1rem;
+	border-radius: 100rem;
+	.progress-bar{
+		flex-basis: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		.egg {
+			width: 1.5rem;
+			padding: .5rem;
+			background-color: #3E6F84;
+			border-radius: 100%;
+		}
+	
+		.bar {
+			background-color: #3E6F84;
+			border-radius: .4rem;
+			width: 100%;
+			height: 3.5rem;
+			margin-left: 1rem;
+			position: relative;
+			&::after {
+				content: '';
+				background-color: #90FCF6;
+				border-radius: .4rem;
+				width: 10%;
+				height: 3.5rem;
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+		}
+	}
+
+	
 }
