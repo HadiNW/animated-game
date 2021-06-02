@@ -1,10 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import EggHatching from './pages/EggHatching';
+import Main from './pages/Main';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+	  <BrowserRouter>
+		<Switch>
+			<Route path="/" exact component={Main} />
+			<Route path="/egg-hatching" exact component={EggHatching} />
+		</Switch>
+	  </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
