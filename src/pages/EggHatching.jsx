@@ -1,16 +1,14 @@
 import { useState, useEffect } from 'react'
 
+import Spritesheet from 'react-responsive-spritesheet'
+import Modal from '../components/Modal'
+
 import background from '../assets/egg_crack_background.png'
 import nest from '../assets/nest.svg'
 import eggCrack from '../assets/egg_crack.png'
 import eggHatch from '../assets/egg_hatch.png'
 import shine from '../assets/shine.png'
 import priceImg from '../assets/price.png'
-
-import Spritesheet from 'react-responsive-spritesheet'
-
-import '../styles/egg-hatching.scss'
-import Modal from '../components/Modal'
 
 const EggHatching = () => {
 

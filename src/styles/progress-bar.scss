@@ -1,0 +1,29 @@
+.progress-bar{
+	flex-basis: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	.egg {
+		width: 1.5rem;
+		padding: .5rem;
+		background-color: #3E6F84;
+		border-radius: 100%;
+	}
+
+	.bar {
+		background-color: #3E6F84;
+		border-radius: .4rem;
+		width: 100%;
+		height: 3.5rem;
+		margin-left: 1rem;
+		position: relative;
+		.bar-filled {
+			background-color: #90FCF6;
+			border-radius: .4rem;
+			height: 3.5rem;
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+	}
+}

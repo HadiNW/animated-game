@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react'
+import { useHistory } from 'react-router-dom'
+import Spritesheet from 'react-responsive-spritesheet'
 
 import background from '../assets/background.jpg'
 import board from '../assets/board.png'
@@ -13,12 +15,8 @@ import leafRight from '../assets/leaf_right.svg'
 import electric from '../assets/electricity_big.png'
 import headerIcons from '../assets/header-icons.svg'
 
-import Spritesheet from 'react-responsive-spritesheet'
 
-import '../styles/index.scss'
 import ProgressBar from '../components/ProgressBar'
-
-import { useHistory } from 'react-router-dom'
 import Button from '../components/Button'
 
 const Main = ({ showFade, setShowFade}) => {
@@ -27,12 +25,6 @@ const Main = ({ showFade, setShowFade}) => {
 	const [progress, setProgress] = useState(0)
 
 	const history = useHistory()
-
-	useEffect(() => {
-		history.listen((location, action) => {
-			console.log({ location, action })
-		})
-	}, [history])
 
 	const clickButton = () => {
 		setTimeout(() => {
@@ -50,7 +42,6 @@ const Main = ({ showFade, setShowFade}) => {
 			setProgress(100 - buttonNumber)
 		}, 1500)
 		if (progress === 100) {
-			console.log({progress})
 			setTimeout(() => {
 				setShowFade(true)
 				setTimeout(() => {
