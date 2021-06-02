@@ -19,6 +19,7 @@ import '../styles/index.scss'
 import ProgressBar from '../components/ProgressBar'
 
 import { useHistory } from 'react-router-dom'
+import Button from '../components/Button'
 
 const Main = ({ showFade, setShowFade}) => {
 	const [buttonClicked, setButtonClicked] = useState(false)
@@ -147,14 +148,13 @@ const Main = ({ showFade, setShowFade}) => {
 					<img src={leafLeft} alt='left grass' />
 				</div>
 				<div className='main-button'>
-					<button
+					<Button
 						className={`primary-button ${
 							buttonClicked ? 'clicked-button-anim' : 'idle-button-anim'
 						} ${buttonNumber === 0 && 'bg-grayss'}`}
 						onClick={clickButton}
-					>
-						{buttonNumber}
-					</button>
+						text={buttonNumber}
+					/>
 				</div>
 				<div className='right-leaf'>
 					<img src={leafRight} alt='right grass' />
