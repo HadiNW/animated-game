@@ -20,11 +20,10 @@ import ProgressBar from '../components/ProgressBar'
 
 import { useHistory } from 'react-router-dom'
 
-const Main = () => {
+const Main = ({ showFade, setShowFade}) => {
 	const [buttonClicked, setButtonClicked] = useState(false)
 	const [buttonNumber, setButtonNumber] = useState(100)
 	const [progress, setProgress] = useState(0)
-	const [showFade, setShowFade] = useState(false)
 
 	const history = useHistory()
 
@@ -55,17 +54,17 @@ const Main = () => {
 				setShowFade(true)
 				setTimeout(() => {
 					history.push('/egg-hatching')
+					setShowFade(false)
 				}, 1000)
 			}, 2000)
 		}
-	}, [buttonNumber, progress, history, buttonClicked])
+	}, [buttonNumber, progress, history, buttonClicked, setShowFade])
 
 	return (
 		<div className='main-page'>
 			<div className='main-bg'>
 				<img src={background} alt='background' />
 			</div>
-			{showFade && <div className='bg-white'></div>}
 			<div className='header'>
 				<ProgressBar progress={progress} />
 				<div className='icons'>

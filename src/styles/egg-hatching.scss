@@ -1,0 +1,62 @@
+.egg-hatching-page {
+	overflow: hidden;
+}
+.egg-hatching-bg {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -10;
+	img {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.hatching-nest {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 80%;
+	img {
+		width: 100%;
+		height: 240px;
+		object-fit: cover;
+		object-position: 0 50px;
+	}
+}
+
+
+.shine {
+	position: absolute;
+	bottom: -10%;
+	left: 0;
+
+	img {
+		width: 100%;
+		height: 100%;
+	}
+	animation-name: rotating;
+	animation-duration: 100s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes rotating {
+	from {
+	  -ms-transform: rotate(0deg);
+	  -moz-transform: rotate(0deg);
+	  -webkit-transform: rotate(0deg);
+	  -o-transform: rotate(0deg);
+	  transform: rotate(0deg);
+	}
+	to {
+	  -ms-transform: rotate(360deg);
+	  -moz-transform: rotate(360deg);
+	  -webkit-transform: rotate(360deg);
+	  -o-transform: rotate(360deg);
+	  transform: rotate(360deg);
+	}
+  }
